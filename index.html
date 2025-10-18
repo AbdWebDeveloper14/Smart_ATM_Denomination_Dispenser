@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart ATM — Mixed Denomination Dispenser</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .atm-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 30px;
+    width: 360px;
+    margin: auto;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    background: #00c6ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+        background: #00c6ff;
+        box-shadow: 0 0 10px #00c6ff;
+  }
+
+  .result {
+    text-align: left;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .error {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="atm-box">
+  <h1>🏦 Smart ATM</h1>
+  <input type="number" id="amount" placeholder="Enter withdrawal amount" />
+  <br>
+  <button onclick="smartATM()">Withdraw</button>
+
+  <div id="output" class="result"></div>
+</div>
+
+<script src="atm.js"></script>
+
+</body>
+</html>
